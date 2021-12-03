@@ -12,10 +12,9 @@ function ToDoList() {
   };
 
   return (
-    <div>
-      <h1>To Dos</h1>
-      <hr />
-      <select value={category} onInput={onInput}>
+    <div className="container">
+      <h1 className="toDoList__header">To Dos</h1>
+      <select className="category__select" value={category} onInput={onInput}>
         <option value={Categoties.TO_DO}>To Do</option>
         <option value={Categoties.DOING}>Doing</option>
         <option value={Categoties.DONE}>Done</option>

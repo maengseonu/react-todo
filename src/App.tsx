@@ -56,7 +56,7 @@ table {
 body {
   font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: ${(props) => props.theme.bgColor};
+  background-color: #74b9ff;
   color:${(props) => props.theme.textColor};
   line-height: 1.2;
 }
@@ -64,6 +64,83 @@ a{
   text-decoration: none;
   color: inherit;
   font-weight: 600;
+}
+input {
+  all: unset;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toDoList__header {
+  font-size: 100px;
+}
+
+.category__select {
+  text-align: center;
+  border-color: #74b9ff;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.formBtn {
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  background-color: #04aaff;
+  border-color: #04aaff;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #74b9ff;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.todo {
+  margin-top: 40px;
+  font-size: 40px;
+  ::marker {
+    color: #74b9ff;
+  }
+  button {
+    color: white;
+    cursor: pointer;
+    background-color: #74b9ff;
+    border: 1px solid #74b9ff;
+    margin-right: 10px;
+    height: 5vh;
+    width: 5vw;
+    font-size: 20px;
+  }
+}
+
+.todo__span {
+  margin-right: 20px;
+  
+}
+.todo__delete {
+  cursor: pointer;
 }
 `;
 

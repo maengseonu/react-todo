@@ -22,12 +22,13 @@ function CreateToDo() {
   return (
     <form onSubmit={handleSubmit(handleValid)}>
       <input
+        className="formInput"
         {...register("toDo", {
           required: "Please write a To Do",
         })}
         placeholder="Write a to do"
       />
-      <button>Add</button>
+      <button className="formBtn">Add</button>
     </form>
   );
 }

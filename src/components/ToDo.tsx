@@ -1,6 +1,8 @@
 import React from "react";
 import { useSetRecoilState } from "recoil";
 import { Categoties, IToDo, toDoState } from "../atoms";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function ToDo({ text, category, id }: IToDo) {
   const setToDos = useSetRecoilState(toDoState);
@@ -34,8 +36,8 @@ function ToDo({ text, category, id }: IToDo) {
   };
 
   return (
-    <li>
-      <span>{text}</span>
+    <li className="todo">
+      <span className="todo__span">✔ {text}</span>
       {category !== Categoties.TO_DO && (
         <button name={Categoties.TO_DO} onClick={onClick}>
           To Do
@@ -51,7 +53,9 @@ function ToDo({ text, category, id }: IToDo) {
           Done
         </button>
       )}
-      <button onClick={deleteToDo}>Delete</button>
+      <span className="todo__delete" onClick={deleteToDo}>
+        <FontAwesomeIcon icon={faTrash} />
+      </span>
     </li>
   );
 }
